@@ -3,11 +3,7 @@ package jp.co.sss.lms.ct.f01_login1;
 import static jp.co.sss.lms.ct.util.WebDriverUtils.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -17,8 +13,6 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 
 /**
@@ -54,11 +48,8 @@ public class Case02 {
 		// ログイン画面が表示されているか検証
 		assertEquals("http://localhost:8080/lms/", webDriver.getCurrentUrl());
 
-		// 開いたページのキャプチャを取得する
-		File file = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);
-
-		//evidenceフォルダに保存
-		Files.copy(file.toPath(), Paths.get("./evidence/Case02_1.png"), StandardCopyOption.REPLACE_EXISTING);
+		getEvidence(new Object() {
+		});
 	}
 
 	@Test
@@ -86,11 +77,8 @@ public class Case02 {
 		assertTrue(errorElement.isDisplayed());
 		assertEquals("* ログインに失敗しました。", errorElement.getText());
 
-		// 開いたページのキャプチャを取得する
-		File file = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);
-
-		//evidenceフォルダに保存
-		Files.copy(file.toPath(), Paths.get("./evidence/Case02_2.png"), StandardCopyOption.REPLACE_EXISTING);
+		getEvidence(new Object() {
+		});
 	}
 
 }
