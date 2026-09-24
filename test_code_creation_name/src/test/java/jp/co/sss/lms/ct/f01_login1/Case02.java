@@ -40,7 +40,6 @@ public class Case02 {
 	@Order(1)
 	@DisplayName("テスト01 トップページURLでアクセス")
 	void test01() throws IOException {
-		// TODO ここに追加
 
 		// トップページにアクセス
 		webDriver.get("http://localhost:8080/lms/");
@@ -56,7 +55,6 @@ public class Case02 {
 	@Order(2)
 	@DisplayName("テスト02 DBに登録されていないユーザーでログイン")
 	void test02() throws IOException {
-		// TODO ここに追加
 
 		// ログインID、パスワードのid属性の要素を指定
 		WebElement idElement = webDriver.findElement(By.id("loginId"));
