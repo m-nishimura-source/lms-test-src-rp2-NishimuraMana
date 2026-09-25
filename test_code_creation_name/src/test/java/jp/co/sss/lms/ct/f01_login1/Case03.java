@@ -79,6 +79,9 @@ public class Case03 {
 		WebElement welcomeElement = webDriver.findElement(welcomeBy);
 		assertTrue(welcomeElement.getText().contains("ようこそ"));
 
+		// コース詳細画面が表示されているか検証
+		assertEquals("http://localhost:8080/lms/course/detail", webDriver.getCurrentUrl());
+
 		// エビデンス取得
 		getEvidence(new Object() {
 		});
