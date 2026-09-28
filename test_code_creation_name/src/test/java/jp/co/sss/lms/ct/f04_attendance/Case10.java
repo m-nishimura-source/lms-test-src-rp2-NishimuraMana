@@ -107,7 +107,7 @@ public class Case10 {
 		// 勤怠管理画面が表示されるまで最大5秒間待機
 		visibilityTimeout(By.xpath("//h2[contains(text(), '勤怠管理')]"), 5);
 
-		// 	勤怠管理画面が表示されているか検証
+		// 勤怠管理画面が表示されているか検証
 		assertEquals("http://localhost:8080/lms/attendance/detail", webDriver.getCurrentUrl());
 
 		// エビデンス取得
@@ -138,7 +138,7 @@ public class Case10 {
 		// 勤怠管理画面が表示されるまで最大5秒間待機
 		visibilityTimeout(By.xpath("//h2[contains(text(), '勤怠管理')]"), 5);
 
-		// 	勤怠管理画面が表示されているか検証
+		// 勤怠管理画面が表示されているか検証
 		assertEquals("http://localhost:8080/lms/attendance/detail", webDriver.getCurrentUrl());
 
 		// 当日の出勤時間の要素を指定して、想定時間と一致するか検証
@@ -173,10 +173,10 @@ public class Case10 {
 		// 勤怠管理画面が表示されるまで最大5秒間待機
 		visibilityTimeout(By.xpath("//h2[contains(text(), '勤怠管理')]"), 5);
 
-		// 	勤怠管理画面が表示されているか検証
+		// 勤怠管理画面が表示されているか検証
 		assertEquals("http://localhost:8080/lms/attendance/detail", webDriver.getCurrentUrl());
 
-		// 当日の出勤時間の要素を指定して、想定時間と一致するか検証
+		// 当日の退勤時間の要素を指定して、想定時間と一致するか検証
 		WebElement endTimeElement = webDriver.findElement(By.xpath("//tbody//tr[contains(@class, 'info')]/td[4]"));
 		assertEquals(endExpectedTime, endTimeElement.getText());
 
